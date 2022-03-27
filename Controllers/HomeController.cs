@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using YoutubeAPI.Models;
 
 namespace YoutubeAPI.Controllers
 {
@@ -25,8 +26,9 @@ namespace YoutubeAPI.Controllers
             //Put into string which is JSON formatted
             string responseFromServer = reader.ReadToEnd();
             JObject parsedString = JObject.Parse(responseFromServer);
+            YoutubeSearch search = parsedString.ToObject<YoutubeSearch>();
 
-            return View();
+            return View(search);
         }
 
      

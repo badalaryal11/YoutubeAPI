@@ -66,7 +66,7 @@ namespace YoutubeAPI.Models
         public Snippet snippet { get; set; }
     }
 
-    public class 
+    public class YoutubeSearch
     {
         public string kind { get; set; }
         public string etag { get; set; }
